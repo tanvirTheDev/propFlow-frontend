@@ -1,0 +1,556 @@
+{
+  "auth": {
+    "login": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melden Sie sich bei Ihrem PropFlow-Konto an",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "rememberMe": "Angemeldet bleiben",
+      "forgotPassword": "Passwort vergessen?",
+      "submit": "Anmelden",
+      "noAccount": "Noch kein Konto?",
+      "register": "Registrieren",
+      "signingIn": "Wird angemeldet..."
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "subtitle": "Verwalten Sie Ihre Immobilien mit PropFlow",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "organisationName": "Unternehmen / Organisation",
+      "terms": "Ich stimme den Nutzungsbedingungen zu",
+      "submit": "Konto erstellen",
+      "haveAccount": "Bereits ein Konto?",
+      "login": "Anmelden",
+      "creating": "Konto wird erstellt...",
+      "passwordHint": "Mind. 8 Zeichen, 1 Großbuchstabe, 1 Zahl"
+    },
+    "invite": {
+      "title": "Einladung annehmen",
+      "subtitle": "Sie wurden eingeladen, {orgName} beizutreten",
+      "welcome": "Willkommen, {name}!",
+      "emailLabel": "E-Mail",
+      "nameLabel": "Name",
+      "password": "Passwort erstellen",
+      "confirmPassword": "Passwort bestätigen",
+      "submit": "Jetzt beitreten",
+      "joining": "Beitreten...",
+      "expired": "Diese Einladung ist abgelaufen oder ungültig.",
+      "alreadyAccepted": "Diese Einladung wurde bereits angenommen."
+    },
+    "forgotPassword": {
+      "title": "Passwort zurücksetzen",
+      "subtitle": "Passwortzurücksetzung folgt in Kürze. Kontaktieren Sie Ihren Vermieter.",
+      "backToLogin": "Zurück zur Anmeldung"
+    },
+    "errors": {
+      "invalidCredentials": "Ungültige E-Mail oder Passwort",
+      "emailExists": "Ein Konto mit dieser E-Mail existiert bereits",
+      "weakPassword": "Passwort muss mind. 8 Zeichen, einen Großbuchstaben und eine Zahl enthalten",
+      "passwordsMismatch": "Passwörter stimmen nicht überein",
+      "inviteInvalid": "Einladungslink ist ungültig oder abgelaufen"
+    }
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Etwas ist schiefgelaufen",
+    "tryAgain": "Erneut versuchen",
+    "logout": "Abmelden",
+    "language": "Sprache",
+    "back": "Zurück",
+    "or": "oder",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "actions": {
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "create": "Erstellen",
+      "add": "Hinzufügen",
+      "search": "Suchen",
+      "filter": "Filtern",
+      "close": "Schließen",
+      "confirm": "Bestätigen",
+      "yes": "Ja",
+      "no": "Nein"
+    }
+  },
+  "unauthorized": {
+    "title": "Zugriff verweigert",
+    "subtitle": "Sie haben keine Berechtigung, diese Seite aufzurufen.",
+    "logout": "Abmelden",
+    "backToLogin": "Zurück zur Anmeldung"
+  },
+  "nav": {
+    "dashboard": "Übersicht",
+    "properties": "Immobilien",
+    "units": "Einheiten",
+    "invites": "Einladungen",
+    "tenants": "Mieter",
+    "tickets": "Tickets",
+    "calendar": "Kalender",
+    "myUnit": "Meine Einheit",
+    "profile": "Profil",
+    "settings": "Einstellungen",
+    "organisations": "Organisationen",
+    "notifications": "Benachrichtigungen"
+  },
+  "dashboard": {
+    "landlord": {
+      "title": "Übersicht",
+      "subtitle": "Portfolio-Überblick",
+      "totalProperties": "Immobilien",
+      "totalUnits": "Einheiten gesamt",
+      "occupiedUnits": "Belegt",
+      "vacantUnits": "Leer",
+      "occupancyRate": "Auslastung",
+      "pendingInvites": "Offene Einladungen",
+      "recentProperties": "Neueste Immobilien",
+      "noProperties": "Noch keine Immobilien. Fügen Sie Ihre erste Immobilie hinzu."
+    },
+    "admin": {
+      "title": "Admin-Übersicht",
+      "subtitle": "Plattformüberblick",
+      "totalOrgs": "Organisationen",
+      "totalUsers": "Benutzer",
+      "totalProperties": "Immobilien",
+      "totalUnits": "Einheiten"
+    },
+    "tenant": {
+      "title": "Meine Übersicht",
+      "subtitle": "Ihr Mietüberblick"
+    }
+  },
+  "properties": {
+    "title": "Immobilien",
+    "subtitle": "Verwalten Sie Ihre Mietobjekte",
+    "addProperty": "Immobilie hinzufügen",
+    "searchPlaceholder": "Immobilien suchen...",
+    "filterCity": "Nach Stadt filtern",
+    "noProperties": "Keine Immobilien gefunden",
+    "noPropertiesHint": "Fügen Sie Ihre erste Immobilie hinzu.",
+    "units": "{count} Einheiten",
+    "form": {
+      "name": "Bezeichnung",
+      "street": "Straße und Hausnummer",
+      "city": "Stadt",
+      "postalCode": "Postleitzahl",
+      "country": "Land",
+      "notes": "Notizen (optional)",
+      "namePlaceholder": "z.B. Musterstraße Haus",
+      "streetPlaceholder": "z.B. Musterstraße 1",
+      "cityPlaceholder": "z.B. Berlin",
+      "postalCodePlaceholder": "10115",
+      "notesPlaceholder": "Weitere Informationen..."
+    },
+    "new": {
+      "title": "Neue Immobilie",
+      "subtitle": "Neue Mietimmobilie zum Portfolio hinzufügen"
+    },
+    "detail": {
+      "units": "Einheiten",
+      "addUnit": "Einheit hinzufügen",
+      "noUnits": "Noch keine Einheiten. Fügen Sie die erste Einheit hinzu.",
+      "tenant": "Mieter",
+      "vacant": "Leer",
+      "occupied": "Belegt",
+      "unitLabel": "Einheit {number}",
+      "floor": "Etage",
+      "bedrooms": "Schlafzimmer",
+      "size": "{size} m²",
+      "back": "Zurück",
+      "viewAll": "Alle anzeigen"
+    },
+    "viewList": "Liste",
+    "viewMap": "Karte",
+    "map": {
+      "notGeocodedWarning": "{count} {count, plural, one {Immobilie konnte} other {Immobilien konnten}} nicht auf der Karte angezeigt werden (Adresse nicht gefunden).",
+      "noPoints": "Keine geocodierten Immobilien für die Karte.",
+      "retryGeocode": "Geocodierung wiederholen",
+      "retrySuccess": "Adresse erfolgreich geocodiert",
+      "retryFailed": "Adresse konnte nicht geocodiert werden"
+    },
+    "errors": {
+      "notFound": "Immobilie nicht gefunden",
+      "postalCode": "Muss eine gültige 5-stellige deutsche Postleitzahl sein"
+    }
+  },
+  "units": {
+    "addUnit": "Einheit hinzufügen",
+    "form": {
+      "unitNumber": "Einheitsnummer",
+      "floor": "Etage",
+      "bedrooms": "Schlafzimmer",
+      "sizeM2": "Größe (m²)",
+      "notes": "Notizen (optional)",
+      "unitNumberPlaceholder": "z.B. 1A, EG, OG1"
+    },
+    "new": {
+      "title": "Neue Einheit",
+      "subtitle": "Einheit zu dieser Immobilie hinzufügen"
+    },
+    "detail": {
+      "title": "Einheit {number}",
+      "currentTenant": "Aktueller Mieter",
+      "noTenant": "Kein Mieter zugewiesen",
+      "inviteTenant": "Mieter einladen",
+      "removeTenant": "Mieter entfernen",
+      "removeTenantConfirm": "Möchten Sie diesen Mieter wirklich aus der Einheit entfernen?"
+    },
+    "myUnit": {
+      "title": "Meine Einheit",
+      "property": "Immobilie",
+      "address": "Adresse",
+      "floor": "Etage",
+      "size": "Größe",
+      "bedrooms": "Schlafzimmer"
+    },
+    "errors": {
+      "numberExists": "Diese Einheitsnummer existiert bereits in der Immobilie",
+      "hasTenant": "Eine Einheit mit aktivem Mieter kann nicht gelöscht werden"
+    }
+  },
+  "tickets": {
+    "title": "Tickets",
+    "myTickets": "Meine Tickets",
+    "subtitle": "Wartungsanfragen",
+    "newTicket": "Neues Ticket",
+    "submitTicket": "Ticket einreichen",
+    "emergency": "Notfall",
+    "emergencyButton": "Notfall",
+    "noTickets": "Noch keine Tickets",
+    "noTicketsHint": "Reichen Sie Ihre erste Wartungsanfrage ein.",
+    "filters": {
+      "all": "Alle",
+      "open": "Offen",
+      "inProgress": "In Bearbeitung",
+      "fixed": "Behoben",
+      "closed": "Geschlossen",
+      "emergency": "Nur Notfälle",
+      "filter": "Filter",
+      "search": "Tickets suchen...",
+      "property": "Alle Objekte",
+      "sort": "Sortieren",
+      "sortNewest": "Neueste zuerst",
+      "sortOldest": "Älteste zuerst",
+      "sortPriority": "Nach Priorität",
+      "sortActivity": "Letzte Aktivität"
+    },
+    "status": {
+      "OPEN": "Offen",
+      "IN_PROGRESS": "In Bearbeitung",
+      "FIXED": "Behoben",
+      "CLOSED": "Geschlossen"
+    },
+    "priority": {
+      "URGENT": "Dringend",
+      "NORMAL": "Normal",
+      "LOW": "Niedrig"
+    },
+    "category": {
+      "PLUMBING": "Sanitär",
+      "HEATING": "Heizung",
+      "INTERNET": "Internet",
+      "CLEANING": "Reinigung",
+      "NOISE": "Lärm",
+      "ELECTRICITY": "Elektrik",
+      "OTHER": "Sonstiges"
+    },
+    "emergencyType": {
+      "WATER_LEAKAGE": "Wasserschaden",
+      "HEATING_FAILURE": "Heizungsausfall",
+      "ELECTRICAL_HAZARD": "Elektrische Gefahr",
+      "SECURITY_ISSUE": "Sicherheitsproblem",
+      "OTHER": "Sonstiger Notfall"
+    },
+    "form": {
+      "step1Title": "Was ist das Problem?",
+      "step2Title": "Problem beschreiben",
+      "step3Title": "Überprüfen & Einreichen",
+      "step": "Schritt {current} von {total}",
+      "priority": "Priorität",
+      "title": "Titel",
+      "titlePlaceholder": "Kurze Beschreibung des Problems",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreiben Sie das Problem detailliert...",
+      "photos": "Fotos (optional, max. 3)",
+      "addPhotos": "Fotos hinzufügen",
+      "dragDrop": "Drag & Drop oder klicken zum Hochladen",
+      "maxFiles": "Max. 3 Dateien, je 5 MB",
+      "isEmergency": "Dies ist ein Notfall",
+      "emergencyType": "Notfalltyp",
+      "next": "Weiter",
+      "back": "Zurück",
+      "submit": "Ticket einreichen",
+      "submitting": "Wird eingereicht..."
+    },
+    "emergencyModal": {
+      "title": "Notfall melden",
+      "subtitle": "Notfall-Tickets werden mit höchster Priorität bearbeitet",
+      "type": "Notfalltyp",
+      "description": "Kurze Beschreibung (optional)",
+      "descriptionPlaceholder": "Notfall beschreiben...",
+      "submit": "Notfall melden",
+      "submitting": "Wird gemeldet..."
+    },
+    "detail": {
+      "submittedBy": "Eingereicht von",
+      "unit": "Einheit",
+      "property": "Objekt",
+      "photos": "Fotos",
+      "statusHistory": "Statusverlauf",
+      "notes": "Interne Notizen",
+      "addNote": "Notiz hinzufügen",
+      "notePlaceholder": "Interne Notiz (für Mieter nicht sichtbar)...",
+      "saveNote": "Notiz speichern",
+      "noNotes": "Noch keine Notizen",
+      "repairHistory": "Reparaturhistorie",
+      "viewRepairHistory": "Alle Tickets für diese Einheit anzeigen",
+      "chat": "Chat",
+      "chatPlaceholder": "Chat — Phase 4",
+      "appointments": "Termine",
+      "appointmentPlaceholder": "Termine — Phase 5",
+      "tabs": {
+        "details": "Details",
+        "notes": "Notizen",
+        "history": "Verlauf"
+      },
+      "changeStatus": "Status ändern"
+    },
+    "card": {
+      "age": "Vor {days} Tagen geöffnet",
+      "today": "Heute geöffnet"
+    },
+    "emergencyBanner": "Aktive Notfälle",
+    "recentTickets": "Aktuelle Tickets",
+    "sendError": "Nachricht konnte nicht gesendet werden",
+    "chat": {
+      "empty": "Noch keine Nachrichten. Starten Sie die Konversation.",
+      "newMessage": "Neue Nachricht ↓",
+      "today": "Heute",
+      "yesterday": "Gestern",
+      "inputPlaceholder": "Nachricht schreiben…",
+      "uploading": "Wird hochgeladen…",
+      "uploadFailed": "Foto-Upload fehlgeschlagen"
+    }
+  },
+  "appointments": {
+    "title": "Termine",
+    "schedule": "Termin vereinbaren",
+    "edit": "Bearbeiten",
+    "complete": "Abschließen",
+    "cancel": "Absagen",
+    "cancelConfirm": "Termin absagen?",
+    "cancelReason": "Grund (optional)",
+    "upcomingTitle": "Nächster Termin",
+    "viewDetails": "Details anzeigen",
+    "pastAppointments": "Vergangene Termine",
+    "empty": "Keine Termine vereinbart",
+    "conflict": "Ein anderer Termin liegt in diesem Zeitraum",
+    "scheduledSuccess": "Termin vereinbart",
+    "scheduleError": "Termin konnte nicht vereinbart werden",
+    "editError": "Termin konnte nicht aktualisiert werden",
+    "completeError": "Termin konnte nicht abgeschlossen werden",
+    "cancelledSuccess": "Termin abgesagt",
+    "cancelError": "Termin konnte nicht abgesagt werden",
+    "completedSuccess": "Termin als abgeschlossen markiert",
+    "duration": {
+      "30min": "30 Minuten",
+      "1hr": "1 Stunde",
+      "2hr": "2 Stunden",
+      "half": "Halber Tag"
+    },
+    "status": {
+      "SCHEDULED": "Geplant",
+      "COMPLETED": "Abgeschlossen",
+      "CANCELLED": "Abgesagt"
+    },
+    "form": {
+      "dateTime": "Datum & Uhrzeit",
+      "duration": "Dauer",
+      "note": "Notiz (optional)",
+      "notePlaceholder": "Termin beschreiben…",
+      "save": "Speichern",
+      "saving": "Wird gespeichert…"
+    }
+  },
+  "calendar": {
+    "title": "Kalender",
+    "week": "Woche",
+    "month": "Monat",
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "noAppointments": "Keine Termine in diesem {period}"
+  },
+  "system": {
+    "ticket.created": "Ticket erstellt",
+    "status.changed": "Status geändert von {from} nach {to} von {by}",
+    "appointment.scheduled": "Termin gesetzt für {date} um {time} Uhr von {by}",
+    "appointment.rescheduled": "Termin verschoben von {oldDate} auf {newDate} von {by}",
+    "appointment.completed": "Termin als abgeschlossen markiert von {by}",
+    "appointment.cancelled": "Termin abgesagt von {by}"
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin-Übersicht",
+      "subtitle": "Plattformüberblick",
+      "recentOrgs": "Neueste Organisationen",
+      "viewAll": "Alle anzeigen",
+      "view": "Anzeigen",
+      "noOrgs": "Noch keine Organisationen"
+    },
+    "stats": {
+      "orgs": "Organisationen",
+      "landlords": "Vermieter",
+      "tenants": "Mieter",
+      "properties": "Immobilien",
+      "openTickets": "Offene Tickets",
+      "emailsToday": "E-Mails heute",
+      "failedNotifications": "Fehlgeschlagene Benachrichtigungen"
+    },
+    "actions": {
+      "createOrg": "Organisation erstellen",
+      "viewFailedNotifications": "Fehlgeschlagene Benachrichtigungen",
+      "back": "Zurück",
+      "save": "Speichern",
+      "add": "Hinzufügen",
+      "cancel": "Abbrechen",
+      "addLandlord": "Vermieter hinzufügen"
+    },
+    "orgs": {
+      "title": "Organisationen",
+      "subtitle": "Alle Plattformorganisationen verwalten",
+      "createTitle": "Organisation erstellen",
+      "created": "Organisation erstellt",
+      "createError": "Organisation konnte nicht erstellt werden",
+      "createdAt": "Erstellt am",
+      "rename": "Organisation umbenennen",
+      "renamed": "Organisation umbenannt",
+      "renameError": "Umbenennen fehlgeschlagen",
+      "addLandlordTitle": "Vermieter hinzufügen",
+      "landlordAdded": "Vermieter hinzugefügt",
+      "addLandlordError": "Vermieter konnte nicht hinzugefügt werden"
+    },
+    "tabs": {
+      "overview": "Übersicht",
+      "users": "Benutzer"
+    },
+    "table": {
+      "name": "Name",
+      "landlords": "Vermieter",
+      "tenants": "Mieter",
+      "properties": "Immobilien",
+      "units": "Einheiten",
+      "tickets": "Tickets",
+      "created": "Erstellt"
+    },
+    "users": {
+      "name": "Name",
+      "email": "E-Mail",
+      "role": "Rolle",
+      "status": "Status",
+      "joined": "Beigetreten",
+      "active": "Aktiv",
+      "deactivatedLabel": "Deaktiviert",
+      "deactivate": "Deaktivieren",
+      "activate": "Aktivieren",
+      "deactivated": "Benutzer deaktiviert",
+      "activated": "Benutzer aktiviert",
+      "deactivateError": "Deaktivierung fehlgeschlagen",
+      "activateError": "Aktivierung fehlgeschlagen",
+      "total": "Benutzer"
+    },
+    "queue": {
+      "title": "Benachrichtigungswarteschlange",
+      "subtitle": "Ausgehende Benachrichtigungen überwachen und debuggen",
+      "refresh": "Aktualisieren",
+      "type": "Typ",
+      "channels": "Kanäle",
+      "attempts": "Versuche",
+      "scheduledAt": "Geplant für",
+      "status": "Status",
+      "empty": "Keine Einträge gefunden"
+    },
+    "orgName": "Organisationsname",
+    "firstLandlord": "Erster Vermieter",
+    "form": {
+      "landlordName": "Name des Vermieters",
+      "landlordEmail": "E-Mail des Vermieters",
+      "landlordPassword": "Passwort"
+    },
+    "pagination": "Seite {page} von {total}"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "Profil und Konto verwalten",
+    "profileSection": "Profil",
+    "securitySection": "Sicherheit",
+    "name": "Vollständiger Name",
+    "email": "E-Mail-Adresse",
+    "emailReadOnly": "E-Mail kann nicht geändert werden",
+    "phone": "Telefonnummer",
+    "language": "Sprache",
+    "currentPassword": "Aktuelles Passwort",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Neues Passwort bestätigen",
+    "save": "Änderungen speichern",
+    "changePassword": "Passwort ändern",
+    "saved": "Profil gespeichert",
+    "saveError": "Profil konnte nicht gespeichert werden",
+    "passwordChanged": "Passwort erfolgreich geändert",
+    "passwordError": "Passwort konnte nicht geändert werden. Überprüfen Sie Ihr aktuelles Passwort.",
+    "deletion": {
+      "title": "Konto löschen",
+      "description": "Beantragen Sie die Löschung Ihres Kontos und aller zugehörigen Daten. Wir bearbeiten Ihre Anfrage innerhalb von 30 Tagen gemäß DSGVO.",
+      "request": "Kontolöschung beantragen",
+      "confirmTitle": "Löschungsantrag bestätigen",
+      "confirmDescription": "Geben Sie Ihre E-Mail-Adresse ein zur Bestätigung. Dies sendet eine Löschanfrage an unser Team — Ihr Konto wird nicht sofort gelöscht.",
+      "confirm": "Anfrage absenden",
+      "success": "Ihre Anfrage wurde erhalten. Wir bearbeiten sie innerhalb von 30 Tagen.",
+      "submitted": "Löschungsantrag eingereicht. Wir melden uns innerhalb von 30 Tagen."
+    }
+  },
+  "invites": {
+    "title": "Mietereinladungen",
+    "subtitle": "Einladungslinks für Mieter verwalten",
+    "createInvite": "Einladung senden",
+    "inviteTenant": "Mieter einladen",
+    "noInvites": "Noch keine Einladungen",
+    "status": {
+      "pending": "Ausstehend",
+      "accepted": "Angenommen",
+      "expired": "Abgelaufen"
+    },
+    "table": {
+      "name": "Name",
+      "email": "E-Mail",
+      "unit": "Einheit",
+      "status": "Status",
+      "expires": "Läuft ab",
+      "actions": "Aktionen"
+    },
+    "form": {
+      "unit": "Einheit",
+      "email": "E-Mail des Mieters",
+      "name": "Name des Mieters",
+      "unitPlaceholder": "Einheit auswählen",
+      "emailPlaceholder": "mieter@beispiel.de",
+      "namePlaceholder": "Vollständiger Name"
+    },
+    "actions": {
+      "resend": "Erneut senden",
+      "cancel": "Stornieren",
+      "resendConfirm": "Diese Einladung erneut senden?",
+      "cancelConfirm": "Diese Einladung stornieren?",
+      "sent": "Einladung gesendet",
+      "resent": "Einladung erneut gesendet",
+      "cancelled": "Einladung storniert"
+    },
+    "errors": {
+      "unitHasTenant": "Die Einheit hat bereits einen aktiven Mieter",
+      "pendingExists": "Es gibt bereits eine ausstehende Einladung für diese Einheit"
+    }
+  }
+}

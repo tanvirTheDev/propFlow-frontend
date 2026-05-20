@@ -1,0 +1,556 @@
+{
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your PropFlow account",
+      "email": "Email address",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "register": "Register",
+      "signingIn": "Signing in..."
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start managing your properties with PropFlow",
+      "name": "Full name",
+      "email": "Email address",
+      "password": "Password",
+      "organisationName": "Company / Organisation name",
+      "terms": "I agree to the terms of service",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "login": "Sign in",
+      "creating": "Creating account...",
+      "passwordHint": "Min. 8 characters, 1 uppercase, 1 number"
+    },
+    "invite": {
+      "title": "Accept your invitation",
+      "subtitle": "You've been invited to join {orgName}",
+      "welcome": "Welcome, {name}!",
+      "emailLabel": "Email",
+      "nameLabel": "Name",
+      "password": "Create password",
+      "confirmPassword": "Confirm password",
+      "submit": "Join now",
+      "joining": "Joining...",
+      "expired": "This invitation has expired or is invalid.",
+      "alreadyAccepted": "This invitation has already been accepted."
+    },
+    "forgotPassword": {
+      "title": "Reset your password",
+      "subtitle": "Password reset coming soon. Contact your landlord.",
+      "backToLogin": "Back to login"
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "emailExists": "An account with this email already exists",
+      "weakPassword": "Password must have at least 8 characters, one uppercase letter and one number",
+      "passwordsMismatch": "Passwords do not match",
+      "inviteInvalid": "Invitation link is invalid or has expired"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "tryAgain": "Try again",
+    "logout": "Log out",
+    "language": "Language",
+    "back": "Go back",
+    "or": "or",
+    "email": "Email",
+    "password": "Password",
+    "actions": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "edit": "Edit",
+      "create": "Create",
+      "add": "Add",
+      "search": "Search",
+      "filter": "Filter",
+      "close": "Close",
+      "confirm": "Confirm",
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "unauthorized": {
+    "title": "Access denied",
+    "subtitle": "You don't have permission to view this page.",
+    "logout": "Log out",
+    "backToLogin": "Back to login"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "properties": "Properties",
+    "units": "Units",
+    "invites": "Invites",
+    "tenants": "Tenants",
+    "tickets": "Tickets",
+    "calendar": "Calendar",
+    "myUnit": "My Unit",
+    "profile": "Profile",
+    "settings": "Settings",
+    "organisations": "Organisations",
+    "notifications": "Notifications"
+  },
+  "dashboard": {
+    "landlord": {
+      "title": "Dashboard",
+      "subtitle": "Overview of your portfolio",
+      "totalProperties": "Properties",
+      "totalUnits": "Total Units",
+      "occupiedUnits": "Occupied",
+      "vacantUnits": "Vacant",
+      "occupancyRate": "Occupancy Rate",
+      "pendingInvites": "Pending Invites",
+      "recentProperties": "Recent Properties",
+      "noProperties": "No properties yet. Add your first property."
+    },
+    "admin": {
+      "title": "Admin Dashboard",
+      "subtitle": "Platform overview",
+      "totalOrgs": "Organisations",
+      "totalUsers": "Users",
+      "totalProperties": "Properties",
+      "totalUnits": "Units"
+    },
+    "tenant": {
+      "title": "My Dashboard",
+      "subtitle": "Your rental overview"
+    }
+  },
+  "properties": {
+    "title": "Properties",
+    "subtitle": "Manage your rental properties",
+    "addProperty": "Add Property",
+    "searchPlaceholder": "Search properties...",
+    "filterCity": "Filter by city",
+    "noProperties": "No properties found",
+    "noPropertiesHint": "Add your first property to get started.",
+    "units": "{count} units",
+    "form": {
+      "name": "Property name",
+      "street": "Street address",
+      "city": "City",
+      "postalCode": "Postal code",
+      "country": "Country",
+      "notes": "Notes (optional)",
+      "namePlaceholder": "e.g. Musterstraße Haus",
+      "streetPlaceholder": "e.g. Musterstraße 1",
+      "cityPlaceholder": "e.g. Berlin",
+      "postalCodePlaceholder": "10115",
+      "notesPlaceholder": "Additional information..."
+    },
+    "new": {
+      "title": "New Property",
+      "subtitle": "Add a new rental property to your portfolio"
+    },
+    "detail": {
+      "units": "Units",
+      "addUnit": "Add Unit",
+      "noUnits": "No units yet. Add the first unit for this property.",
+      "tenant": "Tenant",
+      "vacant": "Vacant",
+      "occupied": "Occupied",
+      "unitLabel": "Unit {number}",
+      "floor": "Floor",
+      "bedrooms": "Bedrooms",
+      "size": "{size} m²",
+      "back": "Back",
+      "viewAll": "View all"
+    },
+    "viewList": "List",
+    "viewMap": "Map",
+    "map": {
+      "notGeocodedWarning": "{count} {count, plural, one {property} other {properties}} could not be placed on the map (address not found).",
+      "noPoints": "No geocoded properties to display on the map.",
+      "retryGeocode": "Retry geocoding",
+      "retrySuccess": "Address geocoded successfully",
+      "retryFailed": "Could not geocode this address"
+    },
+    "errors": {
+      "notFound": "Property not found",
+      "postalCode": "Must be a valid 5-digit German postal code"
+    }
+  },
+  "units": {
+    "addUnit": "Add Unit",
+    "form": {
+      "unitNumber": "Unit number",
+      "floor": "Floor",
+      "bedrooms": "Bedrooms",
+      "sizeM2": "Size (m²)",
+      "notes": "Notes (optional)",
+      "unitNumberPlaceholder": "e.g. 1A, EG, OG1"
+    },
+    "new": {
+      "title": "New Unit",
+      "subtitle": "Add a unit to this property"
+    },
+    "detail": {
+      "title": "Unit {number}",
+      "currentTenant": "Current Tenant",
+      "noTenant": "No tenant assigned",
+      "inviteTenant": "Invite Tenant",
+      "removeTenant": "Remove Tenant",
+      "removeTenantConfirm": "Are you sure you want to remove this tenant from the unit?"
+    },
+    "myUnit": {
+      "title": "My Unit",
+      "property": "Property",
+      "address": "Address",
+      "floor": "Floor",
+      "size": "Size",
+      "bedrooms": "Bedrooms"
+    },
+    "errors": {
+      "numberExists": "This unit number already exists in the property",
+      "hasTenant": "Cannot delete a unit with an active tenant"
+    }
+  },
+  "tickets": {
+    "title": "Tickets",
+    "myTickets": "My Tickets",
+    "subtitle": "Maintenance requests",
+    "newTicket": "New Ticket",
+    "submitTicket": "Submit Ticket",
+    "emergency": "Emergency",
+    "emergencyButton": "Emergency",
+    "noTickets": "No tickets yet",
+    "noTicketsHint": "Submit your first maintenance request.",
+    "filters": {
+      "all": "All",
+      "open": "Open",
+      "inProgress": "In Progress",
+      "fixed": "Fixed",
+      "closed": "Closed",
+      "emergency": "Emergency only",
+      "filter": "Filters",
+      "search": "Search tickets...",
+      "property": "All properties",
+      "sort": "Sort",
+      "sortNewest": "Newest first",
+      "sortOldest": "Oldest first",
+      "sortPriority": "By priority",
+      "sortActivity": "Last activity"
+    },
+    "status": {
+      "OPEN": "Open",
+      "IN_PROGRESS": "In Progress",
+      "FIXED": "Fixed",
+      "CLOSED": "Closed"
+    },
+    "priority": {
+      "URGENT": "Urgent",
+      "NORMAL": "Normal",
+      "LOW": "Low"
+    },
+    "category": {
+      "PLUMBING": "Plumbing",
+      "HEATING": "Heating",
+      "INTERNET": "Internet",
+      "CLEANING": "Cleaning",
+      "NOISE": "Noise",
+      "ELECTRICITY": "Electricity",
+      "OTHER": "Other"
+    },
+    "emergencyType": {
+      "WATER_LEAKAGE": "Water Leakage",
+      "HEATING_FAILURE": "Heating Failure",
+      "ELECTRICAL_HAZARD": "Electrical Hazard",
+      "SECURITY_ISSUE": "Security Issue",
+      "OTHER": "Other Emergency"
+    },
+    "form": {
+      "step1Title": "What is the issue?",
+      "step2Title": "Describe the problem",
+      "step3Title": "Review & Submit",
+      "step": "Step {current} of {total}",
+      "priority": "Priority",
+      "title": "Title",
+      "titlePlaceholder": "Short description of the problem",
+      "description": "Description",
+      "descriptionPlaceholder": "Describe the problem in detail...",
+      "photos": "Photos (optional, max 3)",
+      "addPhotos": "Add photos",
+      "dragDrop": "Drag & drop or click to upload",
+      "maxFiles": "Max 3 files, 5MB each",
+      "isEmergency": "This is an emergency",
+      "emergencyType": "Emergency type",
+      "next": "Next",
+      "back": "Back",
+      "submit": "Submit ticket",
+      "submitting": "Submitting..."
+    },
+    "emergencyModal": {
+      "title": "Report Emergency",
+      "subtitle": "Emergency tickets are handled with top priority",
+      "type": "Emergency type",
+      "description": "Brief description (optional)",
+      "descriptionPlaceholder": "Describe the emergency...",
+      "submit": "Report Emergency",
+      "submitting": "Reporting..."
+    },
+    "detail": {
+      "submittedBy": "Submitted by",
+      "unit": "Unit",
+      "property": "Property",
+      "photos": "Photos",
+      "statusHistory": "Status History",
+      "notes": "Internal Notes",
+      "addNote": "Add note",
+      "notePlaceholder": "Internal note (not visible to tenant)...",
+      "saveNote": "Save note",
+      "noNotes": "No notes yet",
+      "repairHistory": "Repair History",
+      "viewRepairHistory": "View all tickets for this unit",
+      "chat": "Chat",
+      "chatPlaceholder": "Chat — Phase 4",
+      "appointments": "Appointments",
+      "appointmentPlaceholder": "Appointments — Phase 5",
+      "tabs": {
+        "details": "Details",
+        "notes": "Notes",
+        "history": "History"
+      },
+      "changeStatus": "Change status"
+    },
+    "card": {
+      "age": "Opened {days} days ago",
+      "today": "Opened today"
+    },
+    "emergencyBanner": "Active Emergencies",
+    "recentTickets": "Recent Tickets",
+    "sendError": "Failed to send message",
+    "chat": {
+      "empty": "No messages yet. Start the conversation.",
+      "newMessage": "New message ↓",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "inputPlaceholder": "Type a message…",
+      "uploading": "Uploading…",
+      "uploadFailed": "Photo upload failed"
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "schedule": "Schedule Appointment",
+    "edit": "Edit",
+    "complete": "Mark Complete",
+    "cancel": "Cancel",
+    "cancelConfirm": "Cancel this appointment?",
+    "cancelReason": "Reason (optional)",
+    "upcomingTitle": "Upcoming Appointment",
+    "viewDetails": "View details",
+    "pastAppointments": "Past appointments",
+    "empty": "No appointments scheduled",
+    "conflict": "You have another appointment near this time",
+    "scheduledSuccess": "Appointment scheduled",
+    "scheduleError": "Failed to schedule appointment",
+    "editError": "Failed to update appointment",
+    "completeError": "Failed to complete appointment",
+    "cancelledSuccess": "Appointment cancelled",
+    "cancelError": "Failed to cancel appointment",
+    "completedSuccess": "Appointment marked complete",
+    "duration": {
+      "30min": "30 minutes",
+      "1hr": "1 hour",
+      "2hr": "2 hours",
+      "half": "Half day"
+    },
+    "status": {
+      "SCHEDULED": "Scheduled",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled"
+    },
+    "form": {
+      "dateTime": "Date & Time",
+      "duration": "Duration",
+      "note": "Note (optional)",
+      "notePlaceholder": "Describe the appointment…",
+      "save": "Save",
+      "saving": "Saving…"
+    }
+  },
+  "calendar": {
+    "title": "Calendar",
+    "week": "Week",
+    "month": "Month",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "noAppointments": "No appointments this {period}"
+  },
+  "system": {
+    "ticket.created": "Ticket created",
+    "status.changed": "Status changed from {from} to {to} by {by}",
+    "appointment.scheduled": "Appointment set for {date} at {time} by {by}",
+    "appointment.rescheduled": "Appointment rescheduled from {oldDate} to {newDate} by {by}",
+    "appointment.completed": "Appointment marked complete by {by}",
+    "appointment.cancelled": "Appointment cancelled by {by}"
+  },
+  "admin": {
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "subtitle": "Platform overview",
+      "recentOrgs": "Recent Organisations",
+      "viewAll": "View all",
+      "view": "View",
+      "noOrgs": "No organisations yet"
+    },
+    "stats": {
+      "orgs": "Organisations",
+      "landlords": "Landlords",
+      "tenants": "Tenants",
+      "properties": "Properties",
+      "openTickets": "Open Tickets",
+      "emailsToday": "Emails Today",
+      "failedNotifications": "Failed Notifications"
+    },
+    "actions": {
+      "createOrg": "Create Organisation",
+      "viewFailedNotifications": "Failed Notifications",
+      "back": "Back",
+      "save": "Save",
+      "add": "Add",
+      "cancel": "Cancel",
+      "addLandlord": "Add Landlord"
+    },
+    "orgs": {
+      "title": "Organisations",
+      "subtitle": "Manage all platform organisations",
+      "createTitle": "Create Organisation",
+      "created": "Organisation created",
+      "createError": "Failed to create organisation",
+      "createdAt": "Created",
+      "rename": "Rename Organisation",
+      "renamed": "Organisation renamed",
+      "renameError": "Failed to rename organisation",
+      "addLandlordTitle": "Add Landlord",
+      "landlordAdded": "Landlord added",
+      "addLandlordError": "Failed to add landlord"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "users": "Users"
+    },
+    "table": {
+      "name": "Name",
+      "landlords": "Landlords",
+      "tenants": "Tenants",
+      "properties": "Properties",
+      "units": "Units",
+      "tickets": "Tickets",
+      "created": "Created"
+    },
+    "users": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "joined": "Joined",
+      "active": "Active",
+      "deactivatedLabel": "Deactivated",
+      "deactivate": "Deactivate",
+      "activate": "Activate",
+      "deactivated": "User deactivated",
+      "activated": "User activated",
+      "deactivateError": "Failed to deactivate user",
+      "activateError": "Failed to activate user",
+      "total": "users"
+    },
+    "queue": {
+      "title": "Notification Queue",
+      "subtitle": "Monitor and debug outgoing notifications",
+      "refresh": "Refresh",
+      "type": "Type",
+      "channels": "Channels",
+      "attempts": "Attempts",
+      "scheduledAt": "Scheduled At",
+      "status": "Status",
+      "empty": "No entries found"
+    },
+    "orgName": "Organisation name",
+    "firstLandlord": "First Landlord",
+    "form": {
+      "landlordName": "Landlord name",
+      "landlordEmail": "Landlord email",
+      "landlordPassword": "Password"
+    },
+    "pagination": "Page {page} of {total}"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your profile and account",
+    "profileSection": "Profile",
+    "securitySection": "Security",
+    "name": "Full name",
+    "email": "Email address",
+    "emailReadOnly": "Email cannot be changed",
+    "phone": "Phone number",
+    "language": "Language",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "save": "Save changes",
+    "changePassword": "Change password",
+    "saved": "Profile saved",
+    "saveError": "Failed to save profile",
+    "passwordChanged": "Password changed successfully",
+    "passwordError": "Failed to change password. Check your current password.",
+    "deletion": {
+      "title": "Delete Account",
+      "description": "Request deletion of your account and all associated data. We will process your request within 30 days per GDPR requirements.",
+      "request": "Request Account Deletion",
+      "confirmTitle": "Confirm account deletion request",
+      "confirmDescription": "Enter your email address to confirm. This sends a deletion request to our team — your account will not be deleted immediately.",
+      "confirm": "Submit Request",
+      "success": "Your request has been received. We will process it within 30 days.",
+      "submitted": "Deletion request submitted. We will contact you within 30 days."
+    }
+  },
+  "invites": {
+    "title": "Tenant Invites",
+    "subtitle": "Manage tenant invitation links",
+    "createInvite": "Send Invite",
+    "inviteTenant": "Invite Tenant",
+    "noInvites": "No invites yet",
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "expired": "Expired"
+    },
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "unit": "Unit",
+      "status": "Status",
+      "expires": "Expires",
+      "actions": "Actions"
+    },
+    "form": {
+      "unit": "Unit",
+      "email": "Tenant email",
+      "name": "Tenant name",
+      "unitPlaceholder": "Select a unit",
+      "emailPlaceholder": "tenant@example.com",
+      "namePlaceholder": "Full name"
+    },
+    "actions": {
+      "resend": "Resend",
+      "cancel": "Cancel",
+      "resendConfirm": "Resend this invitation?",
+      "cancelConfirm": "Cancel this invitation?",
+      "sent": "Invitation sent",
+      "resent": "Invitation resent",
+      "cancelled": "Invitation cancelled"
+    },
+    "errors": {
+      "unitHasTenant": "Unit already has an active tenant",
+      "pendingExists": "A pending invite already exists for this unit"
+    }
+  }
+}
