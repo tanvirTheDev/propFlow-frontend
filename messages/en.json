@@ -552,5 +552,82 @@
       "unitHasTenant": "Unit already has an active tenant",
       "pendingExists": "A pending invite already exists for this unit"
     }
+  },
+  "visits": {
+    "title": "Visits",
+    "schedule": "Schedule Visit",
+    "created": "Visit scheduled successfully",
+    "updated": "Visit updated",
+    "cancelled": "Visit cancelled",
+    "completed": "Visit marked as complete",
+    "createError": "Failed to schedule visit",
+    "warning24h": "German tenancy law requires at least 24 hours notice before entering a tenant home. This visit is scheduled with less than 24 hours notice.",
+    "upcomingTitle": "Upcoming Landlord Visits",
+    "form": {
+      "step1": "Property & Time",
+      "step2": "Units & Tenants",
+      "step3": "Reason & Summary",
+      "property": "Property",
+      "selectProperty": "Select a property",
+      "date": "Visit Date",
+      "time": "Visit Time",
+      "duration": "Duration",
+      "selectAll": "Select all units",
+      "notifyTenant": "Notify tenant",
+      "reason": "Reason for Visit",
+      "note": "Additional Note",
+      "notePlaceholder": "e.g. Please ensure access to the utility room",
+      "summary": "Summary",
+      "tenantsToNotify": "{count} tenant(s) will receive an email notification",
+      "submit": "Schedule Visit",
+      "update": "Update Visit",
+      "next": "Next",
+      "back": "Back",
+      "noUnits": "No units found for this property",
+      "confirmCancel": "Confirm cancel",
+      "completionNote": "Completion note (optional)",
+      "completionNotePlaceholder": "Add a note…",
+      "cancelReasonPlaceholder": "Reason for cancellation…"
+    },
+    "reasons": {
+      "ROUTINE_INSPECTION": "Routine Inspection",
+      "METER_READING": "Meter Reading",
+      "MAINTENANCE_CHECK": "Maintenance Check",
+      "VIEWING": "Property Viewing",
+      "OTHER": "Other"
+    },
+    "status": {
+      "SCHEDULED": "Scheduled",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled"
+    },
+    "detail": {
+      "units": "Units",
+      "unit": "Unit",
+      "tenant": "Tenant",
+      "notified": "Notified",
+      "emailSent": "Email sent",
+      "vacant": "Vacant",
+      "noNote": "No additional notes",
+      "markComplete": "Mark Complete",
+      "cancel": "Cancel Visit",
+      "cancelReason": "Reason for cancellation (optional)",
+      "edit": "Edit",
+      "pending": "Pending",
+      "property": "Property",
+      "date": "Date",
+      "time": "Time"
+    },
+    "tenant": {
+      "title": "Landlord Visit Scheduled",
+      "description": "Your landlord will visit",
+      "accessNote": "Please ensure access is available during this time."
+    },
+    "calendar": {
+      "eventLabel": "Visit"
+    },
+    "empty": "No visits scheduled",
+    "notice24h": "Less than 24 hours notice",
+    "updateError": "Failed to update visit"
   }
 }

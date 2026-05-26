@@ -4,16 +4,20 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { LayoutDashboard, Building2, Bell, LogOut, Menu } from 'lucide-react';
+import {
+  Home, Ticket, User, Settings, CalendarDays, LogOut, Menu,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLogout } from '@/lib/hooks/use-auth';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
 
 const navItems = [
-  { href: '/admin/dashboard',     icon: LayoutDashboard, key: 'dashboard' },
-  { href: '/admin/organisations', icon: Building2,        key: 'organisations' },
-  { href: '/admin/notifications', icon: Bell,             key: 'notifications' },
+  { href: '/tenant/dashboard', icon: Home,         key: 'dashboard' },
+  { href: '/tenant/tickets',   icon: Ticket,       key: 'tickets' },
+  { href: '/tenant/calendar',  icon: CalendarDays, key: 'calendar' },
+  { href: '/tenant/my-unit',   icon: User,         key: 'myUnit' },
+  { href: '/tenant/settings',  icon: Settings,     key: 'settings' },
 ];
 
 /* ── shared nav link list ──────────────────────────── */
@@ -58,14 +62,11 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
 }
 
 /* ── desktop sidebar ───────────────────────────────── */
-export function AdminSidebar() {
+export function TenantSidebar() {
   return (
     <aside className="flex h-screen w-64 flex-col border-r bg-background">
-      <div className="flex h-14 items-center gap-2 border-b px-5">
+      <div className="flex h-14 items-center border-b px-5">
         <span className="text-xl font-bold text-primary">PropFlow</span>
-        <span className="rounded-full bg-destructive px-2 py-0.5 text-[10px] font-semibold text-destructive-foreground">
-          Admin
-        </span>
       </div>
       <NavLinks />
     </aside>
@@ -73,7 +74,7 @@ export function AdminSidebar() {
 }
 
 /* ── mobile hamburger + drawer ─────────────────────── */
-export function AdminMobileNav() {
+export function TenantMobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -89,11 +90,8 @@ export function AdminMobileNav() {
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left" className="w-64 p-0 flex flex-col">
-          <div className="flex h-14 items-center gap-2 border-b px-5">
+          <div className="flex h-14 items-center border-b px-5">
             <span className="text-xl font-bold text-primary">PropFlow</span>
-            <span className="rounded-full bg-destructive px-2 py-0.5 text-[10px] font-semibold text-destructive-foreground">
-              Admin
-            </span>
           </div>
           <div className="flex flex-1 flex-col overflow-y-auto">
             <NavLinks onNavigate={() => setOpen(false)} />

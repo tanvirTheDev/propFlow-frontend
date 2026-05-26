@@ -16,7 +16,7 @@ import {
 import { de, enUS } from 'date-fns/locale';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import type { Appointment } from '@/lib/api/types';
+import type { Appointment, LandlordVisit } from '@/lib/api/types';
 
 const PRIORITY_COLOR: Record<string, string> = {
   URGENT: 'bg-red-100 text-red-700 border-red-200',
@@ -26,11 +26,13 @@ const PRIORITY_COLOR: Record<string, string> = {
 
 interface Props {
   appointments: Appointment[];
+  visits?: LandlordVisit[];
+  onVisitClick?: (visit: LandlordVisit) => void;
 }
 
 type ViewMode = 'week' | 'month';
 
-export function CalendarView({ appointments }: Props) {
+export function CalendarView({ appointments, visits = [], onVisitClick }: Props) {
   const t = useTranslations('calendar');
   const locale = useLocale();
   const dateLocale = locale === 'de' ? de : enUS;
@@ -50,6 +52,9 @@ export function CalendarView({ appointments }: Props) {
 
   const getAppts = (day: Date) =>
     appointments.filter((a) => isSameDay(new Date(a.scheduledAt), day));
+
+  const getVisits = (day: Date) =>
+    visits.filter((v) => isSameDay(new Date(v.scheduledAt), day));
 
   const navigatePrev = () => {
     if (view === 'week') setCurrent(subWeeks(current, 1));
@@ -95,14 +100,14 @@ export function CalendarView({ appointments }: Props) {
       </div>
 
       {/* Day name headers */}
-      <div className={`grid gap-px ${view === 'week' ? 'grid-cols-7' : 'grid-cols-7'}`}>
+      <div className="grid grid-cols-7 gap-px">
         {(locale === 'de' ? ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'] : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']).map((d) => (
           <div key={d} className="py-2 text-center text-xs font-medium text-muted-foreground">{d}</div>
         ))}
       </div>
 
       {/* Day cells */}
-      <div className={`grid gap-px bg-border ${view === 'week' ? 'grid-cols-7' : 'grid-cols-7'}`}>
+      <div className="grid grid-cols-7 gap-px bg-border">
         {/* Month view: leading empty cells */}
         {view === 'month' && Array.from({ length: (monthStart.getDay() + 6) % 7 }).map((_, i) => (
           <div key={`empty-${i}`} className="min-h-20 bg-muted/30 p-1" />
@@ -110,7 +115,15 @@ export function CalendarView({ appointments }: Props) {
 
         {days.map((day) => {
           const dayAppts = getAppts(day);
+          const dayVisits = getVisits(day);
           const isCurrentMonth = view === 'month' ? isSameMonth(day, current) : true;
+          const maxSlots = view === 'month' ? 2 : 4;
+          const allItems = [
+            ...dayAppts.map((a) => ({ type: 'appt' as const, item: a })),
+            ...dayVisits.map((v) => ({ type: 'visit' as const, item: v })),
+          ];
+          const overflow = allItems.length - maxSlots;
+
           return (
             <div
               key={day.toISOString()}
@@ -122,17 +135,32 @@ export function CalendarView({ appointments }: Props) {
                 {format(day, 'd')}
               </div>
               <div className="space-y-0.5">
-                {dayAppts.slice(0, view === 'month' ? 2 : 4).map((appt) => (
-                  <button
-                    key={appt.id}
-                    onClick={() => router.push(`/landlord/tickets/${appt.ticketId}`)}
-                    className={`w-full truncate rounded border px-1 py-0.5 text-left text-[11px] leading-tight ${PRIORITY_COLOR[appt.ticket.priority]} hover:opacity-80`}
-                  >
-                    {format(new Date(appt.scheduledAt), 'HH:mm')} {appt.ticket.title}
-                  </button>
-                ))}
-                {dayAppts.length > (view === 'month' ? 2 : 4) && (
-                  <p className="px-1 text-[10px] text-muted-foreground">+{dayAppts.length - (view === 'month' ? 2 : 4)} more</p>
+                {allItems.slice(0, maxSlots).map((entry) => {
+                  if (entry.type === 'appt') {
+                    const appt = entry.item;
+                    return (
+                      <button
+                        key={`appt-${appt.id}`}
+                        onClick={() => router.push(`/landlord/tickets/${appt.ticketId}`)}
+                        className={`w-full truncate rounded border px-1 py-0.5 text-left text-[11px] leading-tight ${PRIORITY_COLOR[appt.ticket.priority]} hover:opacity-80`}
+                      >
+                        {format(new Date(appt.scheduledAt), 'HH:mm')} {appt.ticket.title}
+                      </button>
+                    );
+                  }
+                  const visit = entry.item;
+                  return (
+                    <button
+                      key={`visit-${visit.id}`}
+                      onClick={() => onVisitClick?.(visit)}
+                      className="w-full truncate rounded border border-purple-200 bg-purple-100 px-1 py-0.5 text-left text-[11px] leading-tight text-purple-700 hover:opacity-80"
+                    >
+                      {format(new Date(visit.scheduledAt), 'HH:mm')} 🏠 {visit.property.name}
+                    </button>
+                  );
+                })}
+                {overflow > 0 && (
+                  <p className="px-1 text-[10px] text-muted-foreground">+{overflow} more</p>
                 )}
               </div>
             </div>

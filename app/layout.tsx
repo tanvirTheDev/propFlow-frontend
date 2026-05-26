@@ -5,7 +5,7 @@ import { Toaster } from 'sonner';
 import './globals.css';
 import { QueryProvider } from '@/components/providers/query-provider';
 import { ThemeProvider } from '@/components/providers/theme-provider';
-import { CookieBanner } from '@/components/shared/cookie-banner';
+
 
 export const metadata: Metadata = {
   title: {
@@ -32,7 +32,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <ThemeProvider>
               {children}
               <Toaster position="top-right" richColors />
-              <CookieBanner />
             </ThemeProvider>
           </QueryProvider>
         </NextIntlClientProvider>

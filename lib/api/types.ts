@@ -213,6 +213,7 @@ export interface LandlordStats {
   openTickets: number;
   inProgressTickets: number;
   emergencyTickets: number;
+  upcomingVisits: number;
   recentProperties: Property[];
   recentTickets: Ticket[];
 }
@@ -424,4 +425,54 @@ export interface UpdateProfileInput {
 export interface ChangePasswordInput {
   currentPassword: string;
   newPassword: string;
+}
+
+// ── Landlord Visits ──────────────────────────────────────────────────────────
+
+export type VisitStatus = 'SCHEDULED' | 'COMPLETED' | 'CANCELLED';
+
+export type VisitReason =
+  | 'ROUTINE_INSPECTION'
+  | 'METER_READING'
+  | 'MAINTENANCE_CHECK'
+  | 'VIEWING'
+  | 'OTHER';
+
+export interface VisitUnitEntry {
+  id: string;
+  visitId: string;
+  unitId: string;
+  notifyTenant: boolean;
+  emailSentAt: string | null;
+  tenantId: string | null;
+  unit: { id: string; unitNumber: string } | null;
+  tenant: { id: string; name: string; email: string } | null;
+}
+
+export interface LandlordVisit {
+  id: string;
+  orgId: string;
+  propertyId: string;
+  createdById: string;
+  scheduledAt: string;
+  durationMin: number;
+  reason: VisitReason;
+  note: string | null;
+  status: VisitStatus;
+  cancelReason: string | null;
+  completedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+  property: { id: string; name: string; street: string; city: string; postalCode: string };
+  createdBy: { id: string; name: string };
+  units: VisitUnitEntry[];
+}
+
+export interface CreateVisitPayload {
+  propertyId: string;
+  scheduledAt: string;
+  durationMin?: number;
+  reason: VisitReason;
+  note?: string;
+  units: { unitId: string; notifyTenant: boolean }[];
 }

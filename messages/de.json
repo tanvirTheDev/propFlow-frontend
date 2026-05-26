@@ -552,5 +552,82 @@
       "unitHasTenant": "Die Einheit hat bereits einen aktiven Mieter",
       "pendingExists": "Es gibt bereits eine ausstehende Einladung für diese Einheit"
     }
+  },
+  "visits": {
+    "title": "Besichtigungen",
+    "schedule": "Besuch planen",
+    "created": "Besuch erfolgreich geplant",
+    "updated": "Besuch aktualisiert",
+    "cancelled": "Besuch abgesagt",
+    "completed": "Besuch als abgeschlossen markiert",
+    "createError": "Besuch konnte nicht geplant werden",
+    "warning24h": "Das deutsche Mietrecht schreibt eine Ankündigungsfrist von mindestens 24 Stunden vor. Dieser Besuch ist mit weniger als 24 Stunden Vorankündigung geplant.",
+    "upcomingTitle": "Bevorstehende Vermieterbesuche",
+    "form": {
+      "step1": "Objekt & Zeit",
+      "step2": "Einheiten & Mieter",
+      "step3": "Grund & Zusammenfassung",
+      "property": "Objekt",
+      "selectProperty": "Objekt auswählen",
+      "date": "Besuchsdatum",
+      "time": "Besuchszeit",
+      "duration": "Dauer",
+      "selectAll": "Alle Einheiten auswählen",
+      "notifyTenant": "Mieter benachrichtigen",
+      "reason": "Besuchsgrund",
+      "note": "Zusätzliche Hinweise",
+      "notePlaceholder": "z.B. Bitte Zugang zum Zählerraum sicherstellen",
+      "summary": "Zusammenfassung",
+      "tenantsToNotify": "{count} Mieter erhalten eine E-Mail-Benachrichtigung",
+      "submit": "Besuch planen",
+      "update": "Besuch aktualisieren",
+      "next": "Weiter",
+      "back": "Zurück",
+      "noUnits": "Keine Einheiten für dieses Objekt gefunden",
+      "confirmCancel": "Absage bestätigen",
+      "completionNote": "Abschlussnotiz (optional)",
+      "completionNotePlaceholder": "Notiz hinzufügen…",
+      "cancelReasonPlaceholder": "Absagegrund…"
+    },
+    "reasons": {
+      "ROUTINE_INSPECTION": "Routineinspektion",
+      "METER_READING": "Zählerablesung",
+      "MAINTENANCE_CHECK": "Wartungsprüfung",
+      "VIEWING": "Wohnungsbesichtigung",
+      "OTHER": "Sonstiges"
+    },
+    "status": {
+      "SCHEDULED": "Geplant",
+      "COMPLETED": "Abgeschlossen",
+      "CANCELLED": "Abgesagt"
+    },
+    "detail": {
+      "units": "Einheiten",
+      "unit": "Einheit",
+      "tenant": "Mieter",
+      "notified": "Benachrichtigt",
+      "emailSent": "E-Mail gesendet",
+      "vacant": "Leer",
+      "noNote": "Keine zusätzlichen Hinweise",
+      "markComplete": "Als abgeschlossen markieren",
+      "cancel": "Besuch absagen",
+      "cancelReason": "Absagegrund (optional)",
+      "edit": "Bearbeiten",
+      "pending": "Ausstehend",
+      "property": "Objekt",
+      "date": "Datum",
+      "time": "Uhrzeit"
+    },
+    "tenant": {
+      "title": "Vermieterbesuch geplant",
+      "description": "Ihr Vermieter wird vorbeikommen",
+      "accessNote": "Bitte stellen Sie sicher, dass der Zugang während dieser Zeit möglich ist."
+    },
+    "calendar": {
+      "eventLabel": "Besuch"
+    },
+    "empty": "Keine Besuche geplant",
+    "notice24h": "Weniger als 24 Stunden Vorankündigung",
+    "updateError": "Besuch konnte nicht aktualisiert werden"
   }
 }

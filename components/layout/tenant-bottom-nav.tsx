@@ -3,12 +3,13 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { Home, Ticket, User, Settings } from 'lucide-react';
+import { Home, Ticket, User, Settings, CalendarDays } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '/tenant/dashboard', icon: Home, key: 'dashboard' },
   { href: '/tenant/tickets', icon: Ticket, key: 'tickets' },
+  { href: '/tenant/calendar', icon: CalendarDays, key: 'calendar' },
   { href: '/tenant/my-unit', icon: User, key: 'myUnit' },
   { href: '/tenant/settings', icon: Settings, key: 'settings' },
 ];
