@@ -8,7 +8,7 @@ const PropertyMapInner = dynamic(
   () => import('./property-map-inner').then((m) => m.PropertyMapInner),
   {
     ssr: false,
-    loading: () => <Skeleton className="h-full w-full rounded-lg" />,
+    loading: () => <Skeleton className="h-full w-full rounded-2xl" />,
   },
 );
 
@@ -19,7 +19,9 @@ interface Props {
 
 export function PropertyMap({ points, className }: Props) {
   return (
-    <div className={className ?? 'h-[500px] w-full'}>
+    /* The outer div carries className (which may include h-full flex-1 etc.) */
+    <div className={className ?? 'h-125 w-full'}>
+      {/* PropertyMapInner always fills its parent */}
       <PropertyMapInner points={points} />
     </div>
   );

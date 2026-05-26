@@ -31,7 +31,7 @@ export function PropertyMapInner({ points }: Props) {
     <MapContainer
       center={[51.1657, 10.4515]}
       zoom={6}
-      className="h-full w-full rounded-lg"
+      className="h-full w-full"
       scrollWheelZoom
     >
       <TileLayer

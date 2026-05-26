@@ -26,7 +26,7 @@ export default function TenantLayout({ children }: { children: React.ReactNode }
           <NotificationBell ticketBasePath="/tenant/tickets" />
         </header>
 
-        <main className="flex-1 overflow-y-auto bg-muted/30 p-4 md:p-8">
+        <main className="flex-1 overflow-y-auto bg-mesh-violet p-4 md:p-8">
           {children}
         </main>
 

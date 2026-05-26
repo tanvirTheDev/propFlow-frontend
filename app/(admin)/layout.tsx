@@ -20,7 +20,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </span>
         </header>
 
-        <main className="flex-1 overflow-y-auto bg-muted/30 p-4 md:p-8">
+        <main className="flex-1 overflow-y-auto bg-mesh-slate p-4 md:p-8">
           {children}
         </main>
       </div>
