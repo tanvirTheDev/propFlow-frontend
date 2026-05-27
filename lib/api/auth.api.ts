@@ -28,4 +28,10 @@ export const authApi = {
 
   acceptInvite: (data: AcceptInviteInput) =>
     apiClient.post<AuthResponse>('/auth/accept-invite', data).then((r) => r.data),
+
+  forgotPassword: (email: string) =>
+    apiClient.post<{ message: string }>('/auth/forgot-password', { email }).then((r) => r.data),
+
+  resetPassword: (data: { email: string; code: string; newPassword: string }) =>
+    apiClient.post<{ message: string }>('/auth/reset-password', data).then((r) => r.data),
 };

@@ -11,7 +11,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useLogout } from '@/lib/hooks/use-auth';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet';
 
 const navItems = [
   { href: '/landlord/dashboard',  icon: LayoutDashboard, key: 'dashboard' },
@@ -105,6 +105,7 @@ export function LandlordMobileNav() {
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left" className="w-64 p-0 flex flex-col border-r border-border/60">
+          <SheetTitle className="sr-only">Navigation menu</SheetTitle>
           <Link
             href="/landlord/dashboard"
             onClick={() => setOpen(false)}

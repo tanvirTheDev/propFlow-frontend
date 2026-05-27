@@ -41,8 +41,31 @@
     },
     "forgotPassword": {
       "title": "Passwort zurücksetzen",
-      "subtitle": "Passwortzurücksetzung folgt in Kürze. Kontaktieren Sie Ihren Vermieter.",
-      "backToLogin": "Zurück zur Anmeldung"
+      "subtitle": "Gib deine E-Mail ein und wir senden dir einen Verifizierungscode.",
+      "backToLogin": "Zurück zur Anmeldung",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "du@beispiel.de",
+      "sendCode": "Code senden",
+      "sending": "Wird gesendet...",
+      "codeSent": "Code gesendet! Prüfe deine E-Mails.",
+      "verifyTitle": "Code eingeben",
+      "verifySubtitle": "Wir haben einen 6-stelligen Code an {email} gesendet",
+      "verifyCode": "Code bestätigen",
+      "verifying": "Wird überprüft...",
+      "resendCode": "Code erneut senden",
+      "resendIn": "Erneut senden in {seconds}s",
+      "newPasswordTitle": "Neues Passwort setzen",
+      "newPasswordSubtitle": "Wähle ein sicheres Passwort für dein Konto.",
+      "newPasswordLabel": "Neues Passwort",
+      "confirmPasswordLabel": "Passwort bestätigen",
+      "resetPassword": "Passwort zurücksetzen",
+      "resetting": "Wird zurückgesetzt...",
+      "successTitle": "Passwort zurückgesetzt!",
+      "successSubtitle": "Dein Passwort wurde erfolgreich geändert.",
+      "goToLogin": "Zur Anmeldung",
+      "wrongEmail": "Falsche E-Mail?",
+      "codeInvalid": "Ungültiger oder abgelaufener Code. Bitte erneut versuchen.",
+      "resetError": "Passwort konnte nicht zurückgesetzt werden. Bitte erneut versuchen."
     },
     "errors": {
       "invalidCredentials": "Ungültige E-Mail oder Passwort",
@@ -385,12 +408,18 @@
     "noAppointments": "Keine Termine in diesem {period}"
   },
   "system": {
-    "ticket.created": "Ticket erstellt",
-    "status.changed": "Status geändert von {from} nach {to} von {by}",
-    "appointment.scheduled": "Termin gesetzt für {date} um {time} Uhr von {by}",
-    "appointment.rescheduled": "Termin verschoben von {oldDate} auf {newDate} von {by}",
-    "appointment.completed": "Termin als abgeschlossen markiert von {by}",
-    "appointment.cancelled": "Termin abgesagt von {by}"
+    "ticket": {
+      "created": "Ticket erstellt"
+    },
+    "status": {
+      "changed": "Status geändert von {from} nach {to} von {by}"
+    },
+    "appointment": {
+      "scheduled": "Termin gesetzt für {date} um {time} Uhr von {by}",
+      "rescheduled": "Termin verschoben von {oldDate} auf {newDate} von {by}",
+      "completed": "Termin als abgeschlossen markiert von {by}",
+      "cancelled": "Termin abgesagt von {by}"
+    }
   },
   "admin": {
     "dashboard": {

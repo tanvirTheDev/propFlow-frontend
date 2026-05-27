@@ -12,8 +12,14 @@ export const apiClient = axios.create({
 });
 
 apiClient.interceptors.request.use((config) => {
-  const token = useAuthStore.getState().accessToken;
-  if (token) config.headers.Authorization = `Bearer ${token}`;
+  // Don't attach auth tokens to auth endpoints — avoids stale-token interference
+  const isAuthEndpoint = ['/auth/login', '/auth/register', '/auth/refresh', '/auth/accept-invite'].some(
+    (path) => config.url?.includes(path),
+  );
+  if (!isAuthEndpoint) {
+    const token = useAuthStore.getState().accessToken;
+    if (token) config.headers.Authorization = `Bearer ${token}`;
+  }
   return config;
 });
 
@@ -39,7 +45,12 @@ apiClient.interceptors.response.use(
   async (error: AxiosError) => {
     const originalRequest = error.config as typeof error.config & { _retry?: boolean };
 
-    if (error.response?.status === 401 && !originalRequest?._retry) {
+    // Never try to refresh on auth endpoints — 401 there means wrong credentials
+    const isAuthEndpoint = ['/auth/login', '/auth/register', '/auth/refresh'].some(
+      (path) => originalRequest?.url?.includes(path),
+    );
+
+    if (error.response?.status === 401 && !originalRequest?._retry && !isAuthEndpoint) {
       const { refreshToken, clearAuth } = useAuthStore.getState();
 
       if (!refreshToken) {

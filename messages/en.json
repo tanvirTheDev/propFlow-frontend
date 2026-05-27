@@ -41,8 +41,31 @@
     },
     "forgotPassword": {
       "title": "Reset your password",
-      "subtitle": "Password reset coming soon. Contact your landlord.",
-      "backToLogin": "Back to login"
+      "subtitle": "Enter your email and we'll send you a verification code.",
+      "backToLogin": "Back to login",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "sendCode": "Send verification code",
+      "sending": "Sending...",
+      "codeSent": "Code sent! Check your email.",
+      "verifyTitle": "Enter verification code",
+      "verifySubtitle": "We sent a 6-digit code to {email}",
+      "verifyCode": "Verify code",
+      "verifying": "Verifying...",
+      "resendCode": "Resend code",
+      "resendIn": "Resend in {seconds}s",
+      "newPasswordTitle": "Set new password",
+      "newPasswordSubtitle": "Choose a strong password for your account.",
+      "newPasswordLabel": "New password",
+      "confirmPasswordLabel": "Confirm password",
+      "resetPassword": "Reset password",
+      "resetting": "Resetting...",
+      "successTitle": "Password reset!",
+      "successSubtitle": "Your password has been changed successfully.",
+      "goToLogin": "Go to login",
+      "wrongEmail": "Wrong email?",
+      "codeInvalid": "Invalid or expired code. Please try again.",
+      "resetError": "Failed to reset password. Please try again."
     },
     "errors": {
       "invalidCredentials": "Invalid email or password",
@@ -385,12 +408,18 @@
     "noAppointments": "No appointments this {period}"
   },
   "system": {
-    "ticket.created": "Ticket created",
-    "status.changed": "Status changed from {from} to {to} by {by}",
-    "appointment.scheduled": "Appointment set for {date} at {time} by {by}",
-    "appointment.rescheduled": "Appointment rescheduled from {oldDate} to {newDate} by {by}",
-    "appointment.completed": "Appointment marked complete by {by}",
-    "appointment.cancelled": "Appointment cancelled by {by}"
+    "ticket": {
+      "created": "Ticket created"
+    },
+    "status": {
+      "changed": "Status changed from {from} to {to} by {by}"
+    },
+    "appointment": {
+      "scheduled": "Appointment set for {date} at {time} by {by}",
+      "rescheduled": "Appointment rescheduled from {oldDate} to {newDate} by {by}",
+      "completed": "Appointment marked complete by {by}",
+      "cancelled": "Appointment cancelled by {by}"
+    }
   },
   "admin": {
     "dashboard": {

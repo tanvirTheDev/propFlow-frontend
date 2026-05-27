@@ -56,6 +56,19 @@ export function useLogout() {
   });
 }
 
+export function useForgotPassword() {
+  return useMutation({
+    mutationFn: (email: string) => authApi.forgotPassword(email),
+  });
+}
+
+export function useResetPassword() {
+  return useMutation({
+    mutationFn: (data: { email: string; code: string; newPassword: string }) =>
+      authApi.resetPassword(data),
+  });
+}
+
 export function useMe() {
   const { isAuthenticated } = useAuthStore();
 

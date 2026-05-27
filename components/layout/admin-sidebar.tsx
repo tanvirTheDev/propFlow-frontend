@@ -8,7 +8,7 @@ import { LayoutDashboard, Building2, Bell, LogOut, Menu, ShieldCheck } from 'luc
 import { cn } from '@/lib/utils';
 import { useLogout } from '@/lib/hooks/use-auth';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet';
 
 const navItems = [
   { href: '/admin/dashboard',     icon: LayoutDashboard, key: 'dashboard' },
@@ -103,6 +103,7 @@ export function AdminMobileNav() {
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left" className="w-64 p-0 flex flex-col border-r border-border/60">
+          <SheetTitle className="sr-only">Navigation menu</SheetTitle>
           <Link
             href="/admin/dashboard"
             onClick={() => setOpen(false)}
