@@ -50,7 +50,7 @@ apiClient.interceptors.response.use(
     if (!error.response && !originalRequest?._networkRetried && originalRequest) {
       originalRequest._networkRetried = true;
       const toastId = toast.loading('Connecting to server, please wait…');
-      await new Promise((r) => setTimeout(r, 4000));
+      await new Promise((r) => setTimeout(r, 8000));
       toast.dismiss(toastId);
       return apiClient(originalRequest);
     }
