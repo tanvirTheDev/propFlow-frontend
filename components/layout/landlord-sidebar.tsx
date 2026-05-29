@@ -76,7 +76,7 @@ export function LandlordSidebar() {
     <aside className="flex h-screen w-64 flex-col border-r border-border/60 bg-background">
       {/* Logo */}
       <Link
-        href="/landlord/dashboard"
+        href="/"
         className="flex h-14 items-center gap-2.5 border-b border-border/60 px-5 hover:bg-muted/40 transition-colors"
       >
         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary shadow-sm">
@@ -108,7 +108,7 @@ export function LandlordMobileNav() {
         <SheetContent side="left" className="w-64 p-0 flex flex-col border-r border-border/60">
           <SheetTitle className="sr-only">Navigation menu</SheetTitle>
           <Link
-            href="/landlord/dashboard"
+            href="/"
             onClick={() => setOpen(false)}
             className="flex h-14 items-center gap-2.5 border-b border-border/60 px-5 hover:bg-muted/40 transition-colors"
           >
