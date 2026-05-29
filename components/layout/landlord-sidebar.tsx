@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import {
   Building2, CalendarDays, LogOut, LayoutDashboard,
-  Ticket, Settings, Menu, MailOpen,
+  Ticket, Settings, Menu, MailOpen, ClipboardList,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLogout } from '@/lib/hooks/use-auth';
@@ -15,11 +15,12 @@ import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet';
 
 const navItems = [
   { href: '/landlord/dashboard',  icon: LayoutDashboard, key: 'dashboard' },
-  { href: '/landlord/tickets',    icon: Ticket,           key: 'tickets' },
-  { href: '/landlord/properties', icon: Building2,        key: 'properties' },
-  { href: '/landlord/calendar',   icon: CalendarDays,    key: 'calendar' },
-  { href: '/landlord/invites',    icon: MailOpen,         key: 'invites' },
-  { href: '/landlord/settings',   icon: Settings,        key: 'settings' },
+  { href: '/landlord/tickets',    icon: Ticket,          key: 'tickets' },
+  { href: '/landlord/properties', icon: Building2,       key: 'properties' },
+  { href: '/landlord/calendar',   icon: CalendarDays,   key: 'calendar' },
+  { href: '/landlord/visits',     icon: ClipboardList,  key: 'visits' },
+  { href: '/landlord/invites',    icon: MailOpen,        key: 'invites' },
+  { href: '/landlord/settings',   icon: Settings,       key: 'settings' },
 ];
 
 /* ── shared nav link list ──────────────────────────── */
