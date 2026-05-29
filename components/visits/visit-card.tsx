@@ -100,7 +100,7 @@ export function VisitCard({ visit, onEdit }: Props) {
             size="sm"
             variant="outline"
             className="text-green-700 border-green-300 hover:bg-green-50"
-            onClick={() => complete(undefined)}
+            onClick={() => complete({})}
             disabled={completing}
           >
             {t('detail.markComplete')}

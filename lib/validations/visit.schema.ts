@@ -19,7 +19,6 @@ export const createVisitSchema = z.object({
     .string()
     .min(1, 'Date is required')
     .refine((val) => new Date(val) > new Date(), 'Visit must be in the future'),
-  durationMin: z.number().int().min(15).max(480),
   reason: z.enum(VISIT_REASONS, { error: 'Select a reason' }),
   note: z.string().max(1000).optional(),
   units: z.array(visitUnitSchema).min(1, 'Select at least one unit'),

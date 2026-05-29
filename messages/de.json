@@ -614,9 +614,11 @@
       "back": "Zurück",
       "noUnits": "Keine Einheiten für dieses Objekt gefunden",
       "confirmCancel": "Absage bestätigen",
-      "completionNote": "Abschlussnotiz (optional)",
+      "completionNote": "Abschlussnotiz",
       "completionNotePlaceholder": "Notiz hinzufügen…",
-      "cancelReasonPlaceholder": "Absagegrund…"
+      "cancelReasonPlaceholder": "Absagegrund…",
+      "endTime": "Wann haben Sie geendet?",
+      "optional": "optional"
     },
     "reasons": {
       "ROUTINE_INSPECTION": "Routineinspektion",
@@ -645,7 +647,8 @@
       "pending": "Ausstehend",
       "property": "Objekt",
       "date": "Datum",
-      "time": "Uhrzeit"
+      "time": "Uhrzeit",
+      "actualDuration": "Tatsächliche Dauer"
     },
     "tenant": {
       "title": "Vermieterbesuch geplant",

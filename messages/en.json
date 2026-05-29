@@ -614,9 +614,11 @@
       "back": "Back",
       "noUnits": "No units found for this property",
       "confirmCancel": "Confirm cancel",
-      "completionNote": "Completion note (optional)",
+      "completionNote": "Completion note",
       "completionNotePlaceholder": "Add a note…",
-      "cancelReasonPlaceholder": "Reason for cancellation…"
+      "cancelReasonPlaceholder": "Reason for cancellation…",
+      "endTime": "When did you finish?",
+      "optional": "optional"
     },
     "reasons": {
       "ROUTINE_INSPECTION": "Routine Inspection",
@@ -645,7 +647,8 @@
       "pending": "Pending",
       "property": "Property",
       "date": "Date",
-      "time": "Time"
+      "time": "Time",
+      "actualDuration": "Actual Duration"
     },
     "tenant": {
       "title": "Landlord Visit Scheduled",

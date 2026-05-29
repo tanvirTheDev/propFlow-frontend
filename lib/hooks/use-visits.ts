@@ -83,7 +83,8 @@ export function useCompleteVisit(id: string) {
   const t = useTranslations('visits');
 
   return useMutation({
-    mutationFn: (note?: string) => visitsApi.complete(id, note),
+    mutationFn: ({ note, endTime }: { note?: string; endTime?: string }) =>
+      visitsApi.complete(id, note, endTime),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['visits'] });
       toast.success(t('completed'));

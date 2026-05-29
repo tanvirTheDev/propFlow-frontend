@@ -22,8 +22,8 @@ export const visitsApi = {
   ): Promise<{ visit: LandlordVisit; warning?: '24h_notice' }> =>
     apiClient.patch(`/visits/${id}`, data).then((r) => r.data),
 
-  complete: (id: string, note?: string): Promise<LandlordVisit> =>
-    apiClient.post(`/visits/${id}/complete`, { note }).then((r) => r.data),
+  complete: (id: string, note?: string, endTime?: string): Promise<LandlordVisit> =>
+    apiClient.post(`/visits/${id}/complete`, { note, endTime }).then((r) => r.data),
 
   cancel: (id: string, reason?: string): Promise<LandlordVisit> =>
     apiClient.post(`/visits/${id}/cancel`, { reason }).then((r) => r.data),

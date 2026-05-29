@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { differenceInHours } from 'date-fns';
+import { differenceInHours, differenceInMinutes } from 'date-fns';
 import { AlertTriangle, ChevronRight, ChevronLeft, Check } from 'lucide-react';
 import {
   Dialog,
@@ -28,13 +28,6 @@ import { useProperties } from '@/lib/hooks/use-properties';
 import { useUnitsByProperty } from '@/lib/hooks/use-units';
 import { useCreateVisit } from '@/lib/hooks/use-visits';
 import { createVisitSchema, VISIT_REASONS, type CreateVisitFormData } from '@/lib/validations/visit.schema';
-
-const DURATION_OPTIONS = [
-  { value: 30, label: '30 min' },
-  { value: 60, label: '1 hour' },
-  { value: 120, label: '2 hours' },
-  { value: 240, label: 'Half day' },
-];
 
 function minDatetimeLocal(): string {
   return new Date(Date.now() + 31 * 60 * 1000).toISOString().slice(0, 16);
@@ -70,7 +63,6 @@ export function VisitForm({ open, onClose }: Props) {
     defaultValues: {
       propertyId: '',
       scheduledAt: '',
-      durationMin: 60,
       reason: '' as CreateVisitFormData['reason'],
       note: '',
       units: [] as CreateVisitFormData['units'],
@@ -79,7 +71,6 @@ export function VisitForm({ open, onClose }: Props) {
 
   const scheduledAt = watch('scheduledAt');
   const selectedUnits = watch('units');
-  const durationMin = watch('durationMin');
 
   const hoursUntil = scheduledAt ? differenceInHours(new Date(scheduledAt), new Date()) : 999;
   const show24hWarning = hoursUntil < 24 && hoursUntil >= 0;
@@ -96,7 +87,7 @@ export function VisitForm({ open, onClose }: Props) {
   };
 
   const goToStep2 = async () => {
-    const valid = await trigger(['propertyId', 'scheduledAt', 'durationMin']);
+    const valid = await trigger(['propertyId', 'scheduledAt']);
     if (valid) setStep(2);
   };
 
@@ -234,32 +225,6 @@ export function VisitForm({ open, onClose }: Props) {
                   <p>{t('warning24h')}</p>
                 </div>
               )}
-
-              {/* Duration */}
-              <div>
-                <Label>{t('form.duration')}</Label>
-                <Controller
-                  name="durationMin"
-                  control={control}
-                  render={({ field }) => (
-                    <Select
-                      value={String(field.value)}
-                      onValueChange={(v) => field.onChange(Number(v))}
-                    >
-                      <SelectTrigger className="mt-1">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {DURATION_OPTIONS.map((opt) => (
-                          <SelectItem key={opt.value} value={String(opt.value)}>
-                            {opt.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  )}
-                />
-              </div>
 
               <Button type="button" className="w-full" onClick={goToStep2}>
                 {t('form.next')} <ChevronRight className="ml-1 h-4 w-4" />
@@ -401,8 +366,7 @@ export function VisitForm({ open, onClose }: Props) {
                 {scheduledAt && (
                   <p>
                     {new Date(scheduledAt).toLocaleDateString()} ·{' '}
-                    {new Date(scheduledAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ·{' '}
-                    {durationMin} min
+                    {new Date(scheduledAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </p>
                 )}
                 <p className="text-muted-foreground">
