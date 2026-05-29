@@ -172,10 +172,10 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
                         ) : (
                           <Badge variant="outline">{t('detail.vacant')}</Badge>
                         )}
-                        {/* Edit button */}
+                        {/* Edit button — always visible */}
                         <Link
                           href={`/landlord/properties/${id}/units/${unit.id}/edit`}
-                          className="flex h-6 w-6 items-center justify-center rounded-lg bg-gray-100 text-gray-500 opacity-0 transition-all hover:bg-indigo-100 hover:text-indigo-600 group-hover:opacity-100"
+                          className="flex h-6 w-6 items-center justify-center rounded-lg bg-gray-100 text-gray-400 transition-all hover:bg-indigo-100 hover:text-indigo-600"
                           title="Edit unit"
                         >
                           <Pencil className="h-3 w-3" />
