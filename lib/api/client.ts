@@ -7,7 +7,7 @@ import type { ApiWrapper, TokenResponse } from './types';
 
 export const apiClient = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
-  timeout: 30000,
+  timeout: 60000,
   headers: { 'Content-Type': 'application/json' },
 });
 
@@ -43,7 +43,17 @@ apiClient.interceptors.response.use(
     return { ...response, data: wrapped.data ?? response.data };
   },
   async (error: AxiosError) => {
-    const originalRequest = error.config as typeof error.config & { _retry?: boolean };
+    const originalRequest = error.config as typeof error.config & { _retry?: boolean; _networkRetried?: boolean };
+
+    // Auto-retry once on network errors (no response = server sleeping / cold start).
+    // Waits 4 s then retries — by then the server has usually finished waking up.
+    if (!error.response && !originalRequest?._networkRetried && originalRequest) {
+      originalRequest._networkRetried = true;
+      const toastId = toast.loading('Connecting to server, please wait…');
+      await new Promise((r) => setTimeout(r, 4000));
+      toast.dismiss(toastId);
+      return apiClient(originalRequest);
+    }
 
     // Never try to refresh on auth endpoints — 401 there means wrong credentials
     const isAuthEndpoint = ['/auth/login', '/auth/register', '/auth/refresh'].some(
@@ -97,10 +107,6 @@ apiClient.interceptors.response.use(
       } finally {
         isRefreshing = false;
       }
-    }
-
-    if (!error.response && typeof window !== 'undefined') {
-      toast.error('Keine Verbindung zum Server. Bitte überprüfe deine Internetverbindung.');
     }
 
     return Promise.reject(error);

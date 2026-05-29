@@ -3,6 +3,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
+import { AxiosError } from 'axios';
 import { authApi } from '@/lib/api/auth.api';
 import { useAuthStore } from '@/lib/stores/auth.store';
 import { extractErrorMessage } from '@/lib/utils/error-handler';
@@ -20,7 +21,13 @@ export function useLogin() {
       router.push(ROLE_DASHBOARD[result.user.role]);
     },
     onError: (error) => {
-      toast.error(extractErrorMessage(error));
+      const axiosError = error as AxiosError;
+      // Network error after retry = server still unreachable
+      if (!axiosError.response) {
+        toast.error('Server is unavailable. Please try again in a moment.');
+      } else {
+        toast.error(extractErrorMessage(error));
+      }
     },
   });
 }
